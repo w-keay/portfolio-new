@@ -1,33 +1,141 @@
-/* GENERAL */
-
+/**
+ * Global styles
+ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --background-color-dark: #333; /* Change this to your desired dark background color */
+  --text-color-dark: #fff; /* Change this to your desired dark text color */
+}
 
 * {
   margin: 0;
   padding: 0;
 }
 
+/**
+ * Body styles
+ */
 body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Dark mode styles */
+body.darkmode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Set text color to white in dark mode */
+body.darkmode p {
+  color: teal;
+}
+
+body.darkmode h3 {
+  color: teal;
+}
+
+body.darkmode a {
+  color: teal;
+}
+
+body.darkmode button {
+  color: teal;
+}
+
+.body.darkmode .intro-paragraph p {
+  color: white;
+}
+
+body.darkmode .text-container p {
+  color: white !important;
+}
+
+/* Add spacing below the .animation-container section */
+.animation-container {
+  margin-top: 0px; /* Adjust the margin to add space below the section */
+}
+
+.animation-container img {
+  width: 50%; /* Resize the images to 50% of their original size */
+  margin-right: -1%; /* Negative margin to reduce the gap between images */
+  opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+  transition: opacity 0.5s ease; /* Add a smooth transition for the opacity property */
+}
+
+.animation-container img {
+  width: 50%; /* Resize the images to 50% of their original size */
+  margin-right: -1%; /* Negative margin to reduce the gap between images */
+  opacity: 0; /* Set initial opacity to 0 for the fade-in effect */
+  animation: fadeIn 1s ease forwards; /* Apply the fadeIn animation */
+}
+
+/* Keyframes for left-to-right animation */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for right-to-left animation */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations to the profile picture and text content */
+#profile .section__pic-container img {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+#profile .section__text {
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/**
+ * HTML styles
+ */
 html {
   scroll-behavior: smooth;
 }
 
+/**
+ * Paragraph styles
+ */
 p {
   color: rgb(85, 85, 85);
 }
 
-/* TRANSITION */
-
+/**
+ * Transition styles
+ */
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
-
+/**
+ * Desktop navigation styles
+ */
 nav,
 .nav-links {
   display: flex;
@@ -58,6 +166,9 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+/**
+ * Logo styles
+ */
 .logo {
   font-size: 2rem;
 }
@@ -66,8 +177,9 @@ a:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
-
+/**
+ * Hamburger menu styles
+ */
 #hamburger-nav {
   display: none;
 }
@@ -93,6 +205,9 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
+/**
+ * Menu links styles
+ */
 .menu-links {
   position: absolute;
   top: 100%;
@@ -122,6 +237,9 @@ a:hover {
   max-height: 300px;
 }
 
+/**
+ * Hamburger icon animation styles
+ */
 .hamburger-icon.open span:first-child {
   transform: rotate(45deg) translate(10px, 5px);
 }
@@ -146,8 +264,9 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
-
+/**
+ * General section styles
+ */
 section {
   padding-top: 4vh;
   height: 96vh;
@@ -160,8 +279,10 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
 
+/**
+ * Profile section styles
+ */
 #profile {
   display: flex;
   justify-content: center;
@@ -207,21 +328,26 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
-
+/**
+ * Icon styles
+ */
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
-
+/**
+ * Button container styles
+ */
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
+/**
+ * Button styles
+ */
 .btn {
   font-weight: 600;
   transition: all 300ms ease;
@@ -262,8 +388,9 @@ section {
   gap: 1rem;
 }
 
-/* ABOUT SECTION */
-
+/**
+ * About section styles
+ */
 #about {
   position: relative;
 }
@@ -272,6 +399,8 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow projects to wrap onto a new line */
 }
 
 .about-details-container {
@@ -302,6 +431,8 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  flex: 1;
+  min-width: 300px; /* Adjust the minimum width as needed */
 }
 
 .section-container {
@@ -315,8 +446,9 @@ section {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
-
+/**
+ * Experience section styles
+ */
 #experience {
   position: relative;
 }
@@ -354,8 +486,10 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
 
+/**
+ * Projects section styles
+ */
 #projects {
   position: relative;
 }
@@ -381,24 +515,26 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
-/* CONTACT */
-
+.project-btn + .project-btn {
+  margin-left: 1rem;
+}
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh; /* Use min-height instead of fixed height */
+  padding: 2rem 0; /* Adjust the padding as needed */
+  z-index: 1000;
 }
 
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: 1px solid rgb(163, 163, 163); /* Simplified border style */
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .contact-info-container {
@@ -410,19 +546,23 @@ article .icon {
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: 1rem; /* Adjust font size */
+  color: #333;
 }
 
 .contact-icon {
   cursor: default;
+  height: 2.5rem;
+  margin-right: 0.5rem;
 }
 
 .email-icon {
   height: 2.5rem;
 }
 
-/* FOOTER SECTION */
-
+/**
+ * Footer styles
+ */
 footer {
   height: 26vh;
   margin: 0 1rem;
@@ -432,3 +572,41 @@ footer p {
   text-align: center;
 }
 
+.darkmode {
+  /* Define styles for dark mode */
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 1em;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.moon-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.fas.fa-moon {
+  font-size: 1.5em; /* Adjust the size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

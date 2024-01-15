@@ -1,16 +1,48 @@
+<!-- Declaration of HTML5 document type -->
 <!DOCTYPE html>
+
+<!-- Opening of HTML document with English as the language -->
 <html lang="en">
+
+  <!-- Head section containing metadata and external stylesheets -->
   <head>
+    <!-- Character encoding set to UTF-8 -->
     <meta charset="UTF-8" />
+    <!-- Ensures proper rendering and compatibility with Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Responsive viewport configuration -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <!-- Title of the webpage -->
+    <title>William Keay's Portfolio</title>
+    <!-- Link to the main stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Link to the media queries stylesheet for responsive design -->
     <link rel="stylesheet" href="mediaqueries.css" />
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/profile-pic.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/profile-pic.png" type="image/x-icon">
   </head>
+
+  <!-- Body section of the HTML document -->
   <body>
+    <!-- Desktop navigation bar -->
     <nav id="desktop-nav">
+      <!-- Portfolio logo -->
       <div class="logo">William Keay</div>
+      <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+      </div>
+    
+      <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+          document.documentElement.classList.toggle('darkmode');
+        }
+      </script>
+
+      <!-- Navigation links -->
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -20,14 +52,22 @@
         </ul>
       </div>
     </nav>
+
+    <!-- Hamburger (mobile) navigation bar -->
     <nav id="hamburger-nav">
+      <!-- Portfolio logo for mobile view -->
       <div class="logo">William Keay</div>
+
+      <!-- Hamburger menu icon and links -->
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
+          <!-- Hamburger icon spans representing menu bars -->
           <span></span>
           <span></span>
           <span></span>
         </div>
+
+        <!-- Navigation links for mobile view -->
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
@@ -36,14 +76,27 @@
         </div>
       </div>
     </nav>
+
+    <!-- Profile section -->
     <section id="profile">
+      <!-- Container for the profile picture -->
       <div class="section__pic-container">
+        <!-- Profile picture with alt text -->
         <img src="./assets/profile-pic.png" alt="William Keay profile picture" />
       </div>
+
+      <!-- Text content in the profile section -->
       <div class="section__text">
+        <!-- Greeting -->
         <p class="section__text__p1">Hello, I'm</p>
+
+        <!-- Full name as the title -->
         <h1 class="title">William Keay</h1>
+
+        <!-- Job title -->
         <p class="section__text__p2">Frontend Developer</p>
+
+        <!-- Buttons for downloading CV and accessing contact info -->
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -55,68 +108,105 @@
             Contact Info
           </button>
         </div>
+
+        <!-- Container for social media icons -->
         <div id="socials-container">
+          <!-- LinkedIn icon with a link to the profile -->
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://www.linkedin.com/in/william-keay-5310a32a4/'"
+            onclick="window.open('https://www.linkedin.com/in/william-keay-5310a32a4/', '_blank')"
           />
+          <!-- GitHub icon with a link to the profile -->
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/w-keay'"
+            onclick="window.open('https://github.com/w-keay', '_blank')"
+
+            
           />
         </div>
       </div>
     </section>
+    <!-- About section -->
     <section id="about">
+      <!-- Greeting in the about section -->
       <p class="section__text__p1">Get To Know More</p>
+
+      <!-- Title of the about section -->
       <h1 class="title">About Me</h1>
+
+      <!-- Container for the about section content -->
       <div class="section-container">
+
+        <!-- Container for the profile picture in the about section -->
         <div class="section__pic-container">
+          <!-- Profile picture with alt text -->
           <img
             src="./assets/about-pic.png"
             alt="Profile picture"
             class="about-pic"
           />
         </div>
+
+        <!-- Container for about section details -->
         <div class="about-details-container">
+          <!-- Sub-containers for experience and education details -->
           <div class="about-containers">
+
+            <!-- Container for experience details -->
             <div class="details-container">
+              <!-- Experience icon -->
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
                 class="icon"
               />
+              <!-- Title for the section -->
               <h3>Experience</h3>
+              <!-- Experience details -->
               <p>CS50 - Harvard University <br> (200 Hours - Completed) <br />Front End Developer Course - CodeAcademy (350 - Hours Completed)</p>
+              <p>10+ Years Experience Using Adobe Photoshop</p></p>
+              <!-- Line break for better formatting -->
+              <br />
+              <!-- Additional details -->
+              (See Portfolio Below to Measure Current Skill)</p>
             </div>
+
+            <!-- Container for education details -->
             <div class="details-container">
+              <!-- Education icon -->
               <img
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
               />
+              <!-- Title for the section -->
               <h3>Education</h3>
-              <p>BA Bachelors Degree in Performance <br> (First Class Honours)<br />MA Masters Degree in Music Production (Including Master's Level Modules on Coding Music Plugins)</p>
+              <!-- Education details -->
+              <p>BA Bachelors Degree in Performance <br> (First Class Honours)
+                <!-- Line break for better formatting -->
+                <br />MA Masters Degree in Music Production (Including Master's Level Modules on Coding Music Plugins)</p>
             </div>
           </div>
+          <!-- Container for the text description in the about section -->
           <div class="text-container">
+            <!-- Paragraph describing educational background and transition to front-end development -->
             <p>
-              Building upon foundational programming skills acquired during my Masters Degree 
-              at The University of York, I took a decisive step to advance my expertise in 
-              the dynamic field of front-end development. Eager to contribute my acquired knowledge 
-              and hands-on experience, I have honed my proficiency in creating responsive and 
-              visually appealing user interfaces. I am excited about the opportunity to leverage 
-              my skills and academic foundation to drive innovation and elevate user interfaces 
-              in a professional setting. My goal is to bring a fresh perspective and contribute 
-              proactively to the success of forward-thinking projects.
+            Mastering foundational programming skills during my Masters at The University of York, 
+            I ventured into front-end development, fueled by my passion for graphic design. 
+            Leading the development of Runify, a TypeScript running app, and solo-building Snip AI, 
+            integrating OpenAI's GPT model with ReactJS, Vite, and Tailwind CSS, highlight my expertise. 
+            Additionally, Anime Scroller showcases my skills in Next.js 14, emphasizing server-side rendering, infinite scrolling, 
+            and Framer Motion animations, underscoring my commitment to impactful and innovative application development.
             </p>
           </div>
         </div>
       </div>
+
+      <!-- Arrow icon for navigation to the experience section -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -124,25 +214,50 @@
         onclick="location.href='./#experience'"
       />
     </section>
+
+      <!-- Animated images -->
+      <div class="animation-container">
+        <img class="left-to-right" src="./assets/codeacademy.png" alt="Left to Right">
+        <img class="right-to-left" src="./assets/harvard.png" alt="Right to Left">
+      </div>
+
+
+    <!-- Experience section -->
     <section id="experience">
+      <!-- Greeting in the experience section -->
       <p class="section__text__p1">Explore My</p>
+
+      <!-- Title of the experience section -->
       <h1 class="title">Experience</h1>
+
+      <!-- Container for experience details -->
       <div class="experience-details-container">
+        <!-- Sub-container for grouping different sections of experience details -->
         <div class="about-containers">
+          <!-- Container for a specific category of experience details -->
           <div class="details-container">
+            <!-- Sub-title for the specific category of experience -->
             <h2 class="experience-sub-title">Front-End Development</h2>
+
+            <!-- Container for individual articles representing different technologies -->
             <div class="article-container">
+              <!-- Article for HTML experience -->
               <article>
+                <!-- HTML icon -->
                 <img
                   src="./assets/html-logo.webp"
                   alt="Experience icon"
                   class="icon"
                 />
+                <!-- Details for HTML experience -->
                 <div>
+                  <!-- Technology name -->
                   <h3>HTML</h3>
+                  <!-- Experience level -->
                   <p>Experienced</p>
                 </div>
               </article>
+              <!-- Article for CSS -->
               <article>
                 <img
                   src="./assets/css-logo.webp"
@@ -154,6 +269,7 @@
                   <p>Experienced</p>
                 </div>
               </article>
+              <!-- Article for JavaScript -->
               <article>
                 <img
                   src="./assets/js-logo.png"
@@ -165,6 +281,7 @@
                   <p>Experienced</p>
                 </div>
               </article>
+              <!-- Article for React -->
               <article>
                 <img
                   src="./assets/React-icon.png"
@@ -176,6 +293,7 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <!-- Article for TypeScript -->
               <article>
                 <img
                   src="./assets/typescript-logo.png"
@@ -187,6 +305,7 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <!-- Article for SASS -->
               <article>
                 <img
                   src="./assets/sass-logo.png"
@@ -198,6 +317,7 @@
                   <p>Basic</p>
                 </div>
               </article>
+              <!-- Article for Gulp -->
               <article>
                 <img
                   src="./assets/gulp-logo.svg"
@@ -211,9 +331,14 @@
               </article>
             </div>
           </div>
+
+          <!-- Experience level for Back-End Development -->
           <div class="details-container">
+            <!-- Sub-title for Back-End Development -->
             <h2 class="experience-sub-title">Back-End Development</h2>
+            <!-- Container for articles related to Back-End technologies -->
             <div class="article-container">
+              <!-- Article for Python -->
               <article>
                 <img
                   src="./assets/python-logo.png"
@@ -225,6 +350,7 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <!-- Article for Git -->
               <article>
                 <img
                   src="./assets/git-logo.png"
@@ -236,6 +362,7 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <!-- Article for Flask -->
               <article>
                 <img
                   src="./assets/flask-icon.png"
@@ -247,6 +374,7 @@
                   <p>Basic</p>
                 </div>
               </article>
+              <!-- Article for Django -->
               <article>
                 <img
                   src="./assets/django-logo.png"
@@ -262,6 +390,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Arrow icon linking to Projects section -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -269,85 +399,216 @@
         onclick="location.href='./#projects'"
       />
     </section>
+
+    <!-- Projects Section -->
     <section id="projects">
+      <!-- Section title and description -->
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Running Pulse</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
+
+      <!-- Container for individual project details -->
+<div class="experience-details-container">
+  <div class="about-containers">
+    <!-- Project 4: BurgerBudz -->
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img
+          src="./assets/project-4.png"
+          alt="Project 4"
+          class="project-img"
+        />
       </div>
+      <h2 class="experience-sub-title project-title">BurgerBudz</h2>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://youtu.be/qeeFUOtL1qo', '_blank')"
+        >
+          Video Demo
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/w-keay/burgerbudz-main', '_blank')"
+        >
+          Github
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://burgerbudz-main.vercel.app/', '_blank')"
+        >
+          Live Website
+        </button>
+      </div>
+    </div>
+    
+
+    <!-- Project 2: Snip AI -->
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img
+          src="./assets/project-2.png"
+          alt="Project 2"
+          class="project-img"
+        />
+      </div>
+      <h2 class="experience-sub-title project-title">Snip AI</h2>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://youtu.be/Y6mkifM7LO0', '_blank')"
+        >
+          Video Demo
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/w-keay/snip-openai-main', '_blank')"
+        >
+          Github
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://657671dbce77751b55db55b1--courageous-custard-801280.netlify.app/', '_blank')"
+        >
+          Live Website
+        </button>
+      </div>
+    </div>
+
+    <!-- Project 5: BakeCake -->
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img
+          src="./assets/project-5.png"
+          alt="Project 5"
+          class="project-img"
+        />
+      </div>
+      <h2 class="experience-sub-title project-title">BakeCake</h2>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://youtu.be/Z2UnXkK4pCA', '_blank')"
+        >
+          Video Demo
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/w-keay/bakecake-main', '_blank')"
+        >
+          Github
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://bakecake-main.vercel.app/', '_blank')"
+        >
+          Live Website
+        </button>
+      </div>
+    </div>
+    
+    <!-- Project 1: Runify -->
+    <div class="details-container color-container">
+      <!-- Project image -->
+      <div class="article-container">
+        <img
+          src="./assets/project-1.png"
+          alt="Project 1"
+          class="project-img"
+        />
+      </div>
+      <!-- Project title -->
+      <h2 class="experience-sub-title project-title">Runify</h2>
+      <!-- Buttons for GitHub and Live Website -->
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://youtu.be/A1-lYKyWf1g', '_blank')"
+        >
+          Video Demo
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/w-keay/runify-latest', '_blank')"
+        >
+          Github
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://runify-latest.pages.dev/ ', '_blank')"
+        >
+          Live Website
+        </button>
+      </div>
+    </div>
+
+    <!-- Project 3: Anime Scroller -->
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img
+          src="./assets/project-3.png"
+          alt="Project 3"
+          class="project-img"
+        />
+      </div>
+      <h2 class="experience-sub-title project-title">Anime Scroller</h2>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://youtu.be/4kyRHfde1-g', '_blank')"
+        >
+          Video Demo
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/w-keay/anime_scroller-main', '_blank')"
+        >
+          Github
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://anime-scroller-main.vercel.app/', '_blank')"
+        >
+          Live Website
+        </button>
+      </div>
+    </div>
+
+    <!-- Project 6: LeoLingo -->
+    <div class="details-container color-container">
+      <div class="article-container">
+        <img
+          src="./assets/project-6.png"
+          alt="Project 6"
+          class="project-img"
+        />
+      </div>
+      <h2 class="experience-sub-title project-title">LeoLingo</h2>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://youtu.be/inRqEXKxDWM', '_blank')"
+        >
+          Video Demo
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://github.com/w-keay/leolingo-main', '_blank')"
+        >
+          Github
+        </button>
+        <button
+          class="btn btn-color-2 project-btn"
+          onclick="window.open('https://leolingo-main.vercel.app/', '_blank')"
+        >
+          Live Website
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Arrow icon linking to Contact section -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -355,11 +616,17 @@
         onclick="location.href='./#contact'"
       />
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
+      <!-- Section title and description -->
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
+
+      <!-- Container for contact information -->
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
+          <!-- Email icon and email address -->
           <img
             src="./assets/email.png"
             alt="Email icon"
@@ -367,17 +634,21 @@
           />
           <p><a href="mailto:keaykeay99 @gmail.com">keaykeay99@gmail.com</a></p>
         </div>
+        <!-- LinkedIn icon and LinkedIn profile link -->
         <div class="contact-info-container">
           <img
             src="./assets/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com/in/william-keay-5310a32a4/">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/william-keay-5310a32a4/" target="_blank">LinkedIn</a></p>
         </div>
       </div>
     </section>
+
+    <!-- Footer Section -->
     <footer>
+      <!-- Navigation links -->
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
@@ -388,8 +659,12 @@
           </ul>
         </div>
       </nav>
+
+      <!-- Copyright information -->
       <p>Copyright &#169; 2023 William Keay. All Rights Reserved.</p>
     </footer>
+
+    <!-- Script inclusion for additional functionality -->
     <script src="script.js"></script>
   </body>
 </html>
