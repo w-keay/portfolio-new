@@ -167,3 +167,177 @@
   }
 
 
+/* Media Query for screens with max-width 1400px */
+@media screen and (max-width: 1400px) {
+  .section-container,
+  #profile,
+  #experience .experience-details-container,
+  #contact .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section__pic-container,
+  .details-container {
+    width: 90%; /* Allows images to resize within their containers */
+    height: auto; /* Adjust height automatically */
+    margin: 0 auto; /* Center align the container */
+  }
+
+  .about-details-container,
+  .experience-details-container {
+    width: 100%; /* Full width for better spacing */
+  }
+
+  .btn-container {
+    flex-direction: column; /* Stack buttons on smaller screens */
+  }
+
+  .contact-info-container {
+    flex-direction: column; /* Stack contact info on smaller screens */
+  }
+}
+
+/* Media Query for screens with max-width 1200px */
+@media screen and (max-width: 1200px) {
+  section {
+    margin: 0 5%; /* Reduce side margins */
+  }
+
+  .article-container {
+    justify-content: center; /* Center articles within their container */
+  }
+
+  .btn {
+    width: auto; /* Allow buttons to grow with text */
+    padding: 0.5rem 1rem; /* Reduce padding */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack nav-links */
+    align-items: center; /* Center align nav-links */
+  }
+}
+
+/* Media Query for screens with max-width 600px */
+@media screen and (max-width: 600px) {
+  .section__text__p1,
+  .section__text__p2,
+  .experience-sub-title,
+  .
+title {
+font-size: 1.25rem; /* Smaller text for smaller screens */
+}
+
+.title {
+font-size: 2rem; /* Slightly smaller titles for smaller screens */
+}
+
+nav,
+.nav-links {
+flex-direction: column;
+gap: 0.5rem;
+}
+
+.nav-links li a {
+font-size: 1rem; /* Smaller font size for nav items */
+}
+
+.details-container {
+padding: 1rem;
+margin-bottom: 1rem; /* Add space between items */
+}
+
+.btn {
+font-size: 0.8rem; /* Smaller font size for buttons */
+}
+
+.contact-info-container p,
+.nav-links li a {
+font-size: 0.9rem; /* Smaller font size for contact info and nav links */
+}
+
+.animation-container img {
+width: 100%; /* Full width images in the animation container /
+margin-right: 0; / Reset negative margin */
+}
+}
+
+/* Additional styles for responsiveness /
+.section__pic-container img,
+.project-img {
+max-width: 100%;
+height: auto; / Ensure images are responsive and maintain aspect ratio */
+}
+
+/* Ensure buttons and links are easily clickable on touch devices /
+.btn,
+.nav-links li a {
+padding: 10px 15px; / Increase padding for a larger clickable area /
+font-size: inherit; / Inherit font size from parent for consistency */
+}
+
+/* Ensure the dark mode toggle is visible and accessible /
+.dark-mode-toggle {
+top: 10px;
+right: 10px; / Position it further from the corners /
+font-size: 1.25rem; / Increase size for better visibility */
+}
+
+/* Make sure text doesn't overflow its container /
+.text-container p,
+.details-container p {
+word-wrap: break-word; / Break the words to prevent horizontal scrolling */
+}
+
+/* Fix for the hamburger menu /
+.menu-links.open {
+max-height: none; / Allow the menu to expand as needed */
+}
+
+/* Responsive padding and margins /
+section {
+padding: 4vh 5%; / Responsive vertical padding and horizontal margin */
+}
+
+/* Ensure footer content is centered and has enough space /
+footer {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 2rem 1rem; / Add padding */
+}
+
+footer p {
+margin-top: 1rem; /* Add margin above the text */
+}
+
+/* Responsive animations */
+@key
+
+frames fadeIn {
+to {
+opacity: 1;
+}
+}
+
+.animation-container img.left-to-right,
+.animation-container img.right-to-left {
+animation: fadeIn 1s ease forwards;
+}
+
+/* Responsive grid for project containers */
+#projects .about-containers {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-gap: 1rem;
+}
+
+/* Responsive text alignment for smaller screens */
+.section__text, .about-details-container, .experience-details-container, .contact-info-upper-container {
+text-align: center;
+}
+
+/* These are just starting points. You might need to adjust values such as sizes and breakpoints based on your actual content and design. Test these changes and tweak as necessary. */
+
