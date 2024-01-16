@@ -388,11 +388,15 @@ section {
   gap: 1rem;
 }
 
+
+
+
 /**
  * About section styles
  */
 #about {
   position: relative;
+  margin-bottom: 100rem; /* Add space after the projects section */
 }
 
 .about-containers {
@@ -415,6 +419,13 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  height: auto; /* This ensures that the height scales in proportion to the width, maintaining the aspect ratio */
+  display: block; /* This will prevent inline spacing issues */
+  margin-right: 100rem;
+}
+
+#about-me-title {
+  margin-bottom: 50rem;
 }
 
 .arrow {
@@ -451,6 +462,7 @@ section {
  */
 #experience {
   position: relative;
+  margin-bottom: 50rem; /* Add space after the projects section */
 }
 
 .experience-sub-title {
@@ -492,6 +504,7 @@ article .icon {
  */
 #projects {
   position: relative;
+  margin-bottom: 100rem; /* Add space after the projects section */
 }
 
 .color-container {
@@ -524,7 +537,9 @@ article .icon {
   flex-direction: column;
   min-height: 70vh; /* Use min-height instead of fixed height */
   padding: 2rem 0; /* Adjust the padding as needed */
-  z-index: 1000;
+  position: relative; /* Required for z-index to take effect */
+  z-index: 10; /* Higher value to ensure it's on top of the previous content */
+  padding: 2rem 0; /* Add padding to ensure content is not touching edges */
 }
 
 .contact-info-upper-container {

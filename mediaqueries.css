@@ -1,343 +1,169 @@
-/* Media Query for screens with max-width 1400px */
 @media screen and (max-width: 1400px) {
-  /* Adjustments for #profile section */
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-
-    /* Flex-wrap adjustment for .about-containers */
-    .about-containers {
-      flex-wrap: wrap;
-    }
-
-    /* Height adjustment for #contact and #projects sections */
-    #contact,
-    #projects {
-      height: fit-content;
-    }
-    /* Dark mode styles for smaller screens */
-    body.darkmode {
-      background-color: #333; /* Replace with your dark mode background color */
-      color: #fff; /* Replace with your dark mode text color */
-    }
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
-  
-  /* Media Query for screens with max-width 1200px */
-  @media screen and (max-width: 1200px) {
-    /* Display adjustments for navigation */
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-
-    /* Margin adjustment for #experience and .experience-details-container */
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-
-    /* Display adjustments for #profile, .section-container, and .arrow */
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-
-    /* Height adjustment for section and .section-container */
-    section,
-    .section-container {
-      height: fit-content;
-    }
-
-    /* Margin and width adjustments for section */
-    section {
-      margin: 0 5%;
-    }
-
-    /* Width and height adjustments for .section__pic-container */
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-
-    /* Margin-top adjustment for .about-containers */
-    .about-containers {
-      margin-top: 0;
-    }
-    /* Dark mode styles for medium-sized screens */
-    body.darkmode {
-      background-color: #555; /* Replace with your dark mode background color */
-      color: #fff; /* Replace with your dark mode text color */
-    }
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  /* Media Query for screens with max-width 600px */
-  @media screen and (max-width: 600px) {
-    /* Height adjustment for #contact and footer sections */
-    #contact,
-    footer {
-      height: 40vh;
-    }
-
-    /* Height and margin-bottom adjustment for #profile */
-    #profile {
-      height: 83vh;
-      margin-bottom: 0;
-    }
-
-    /* Font-size adjustment for article */
-    article {
-      font-size: 1rem;
-    }
-
-    /* Height and margin-bottom adjustment for footer nav */
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
-
-    /* Flex-wrap adjustment for .about-containers, .contact-info-upper-container, and .btn-container */
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-      flex-wrap: wrap;
-    }
-
-    /* Margin adjustment for .contact-info-container */
-    .contact-info-container {
-      margin: 0;
-    }
-
-    /* Font-size adjustment for .contact-info-container p, .nav-links li a */
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-
-    /* Font-size adjustment for .experience-sub-title */
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-
-    /* Font-size adjustment for .logo */
-    .logo {
-      font-size: 1.5rem;
-    }
-
-    /* Flex-direction, gap, and text-align adjustments for .nav-links */
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-
-    /* Width, height, and justify-content adjustments for .section__pic-container */
-    .section__pic-container {
-      width: auto;
-      height: 46vw;
-      justify-content: center;
-    }
-
-    /* Font-size adjustment for .section__text__p2 */
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-
-    /* Font-size adjustment for .title */
-    .title {
-      font-size: 2rem;
-    }
-
-    /* Text-align adjustment for .text-container */
-    .text-container {
-      text-align: justify;
-    }
-
-    /* Dark mode styles for smaller screens */
-    body.darkmode {
-      background-color: #555; /* Replace with your dark mode background color */
-      color: #fff; /* Replace with your dark mode text color */
-    }
+  #contact,
+  #projects {
+    height: fit-content;
   }
+}
 
-
-/* Media Query for screens with max-width 1400px */
-@media screen and (max-width: 1400px) {
-  .section-container,
-  #profile,
-  #experience .experience-details-container,
-  #contact .contact-info-upper-container {
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
   }
-
-  .section__pic-container,
-  .details-container {
-    width: 90%; /* Allows images to resize within their containers */
-    height: auto; /* Adjust height automatically */
-    margin: 0 auto; /* Center align the container */
+  #hamburger-nav {
+    display: flex;
   }
-
-  .about-details-container,
+  #experience,
   .experience-details-container {
-    width: 100%; /* Full width for better spacing */
+    margin-top: 2rem;
   }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
   .btn-container {
-    flex-direction: column; /* Stack buttons on smaller screens */
+    flex-wrap: wrap;
   }
-
   .contact-info-container {
-    flex-direction: column; /* Stack contact info on smaller screens */
+    margin: 0;
   }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+
+/* Base styles outside of media queries to ensure elements are flexible */
+.section__pic-container img,
+.details-container {
+  max-width: 100%; /* ensures that images and containers do not overflow their parent */
+  height: auto; /* maintains aspect ratio for images */
+}
+
+
+
+.details-container {
+  margin: 1rem 0; /* ensures spacing between containers */
 }
 
 /* Media Query for screens with max-width 1200px */
 @media screen and (max-width: 1200px) {
-  section {
-    margin: 0 5%; /* Reduce side margins */
+  .section-container,
+  .about-details-container,
+  .text-container {
+    width: auto; /* allows the container to grow with the content */
+    padding: 1rem; /* adds padding inside the containers */
   }
 
-  .article-container {
-    justify-content: center; /* Center articles within their container */
+  .about-containers {
+    flex-direction: column; /* stacks the experience and education containers */
   }
 
-  .btn {
-    width: auto; /* Allow buttons to grow with text */
-    padding: 0.5rem 1rem; /* Reduce padding */
+  .section__pic-container {
+    width: 100%; /* allows the image to scale within its container */
+    margin-bottom: 1rem; /* adds margin below the image */
   }
 
-  .nav-links {
-    flex-direction: column; /* Stack nav-links */
-    align-items: center; /* Center align nav-links */
+  .section__text {
+    margin-bottom: 1rem; /* adds margin below the text for spacing */
   }
 }
 
 /* Media Query for screens with max-width 600px */
 @media screen and (max-width: 600px) {
-  .section__text__p1,
-  .section__text__p2,
-  .experience-sub-title,
-  .
-title {
-font-size: 1.25rem; /* Smaller text for smaller screens */
+  .section__pic-container {
+    height: auto; /* adjusts the height automatically */
+  }
+
+  .section__text__p1, .section__text__p2, .title {
+    text-align: center; /* centers the text in the profile section */
+  }
+
+  .nav-links li a,
+  .contact-info-container p {
+    font-size: 1rem; /* ensures text is large enough to read */
+  }
+
+  .details-container {
+    margin: 0.5rem; /* reduces margin for smaller screens */
+    padding: 1rem; /* ensures padding is consistent */
+  }
+
+  .text-container p {
+    font-size: 0.9rem; /* reduces the font size to fit smaller screens */
+  }
 }
 
-.title {
-font-size: 2rem; /* Slightly smaller titles for smaller screens */
+/* Ensure text doesn't overflow its container */
+.text-container p {
+  word-wrap: break-word; /* allows long words to be broken and wrap to the next line */
 }
-
-nav,
-.nav-links {
-flex-direction: column;
-gap: 0.5rem;
-}
-
-.nav-links li a {
-font-size: 1rem; /* Smaller font size for nav items */
-}
-
-.details-container {
-padding: 1rem;
-margin-bottom: 1rem; /* Add space between items */
-}
-
-.btn {
-font-size: 0.8rem; /* Smaller font size for buttons */
-}
-
-.contact-info-container p,
-.nav-links li a {
-font-size: 0.9rem; /* Smaller font size for contact info and nav links */
-}
-
-.animation-container img {
-width: 100%; /* Full width images in the animation container /
-margin-right: 0; / Reset negative margin */
-}
-}
-
-/* Additional styles for responsiveness /
-.section__pic-container img,
-.project-img {
-max-width: 100%;
-height: auto; / Ensure images are responsive and maintain aspect ratio */
-}
-
-/* Ensure buttons and links are easily clickable on touch devices /
-.btn,
-.nav-links li a {
-padding: 10px 15px; / Increase padding for a larger clickable area /
-font-size: inherit; / Inherit font size from parent for consistency */
-}
-
-/* Ensure the dark mode toggle is visible and accessible /
-.dark-mode-toggle {
-top: 10px;
-right: 10px; / Position it further from the corners /
-font-size: 1.25rem; / Increase size for better visibility */
-}
-
-/* Make sure text doesn't overflow its container /
-.text-container p,
-.details-container p {
-word-wrap: break-word; / Break the words to prevent horizontal scrolling */
-}
-
-/* Fix for the hamburger menu /
-.menu-links.open {
-max-height: none; / Allow the menu to expand as needed */
-}
-
-/* Responsive padding and margins /
-section {
-padding: 4vh 5%; / Responsive vertical padding and horizontal margin */
-}
-
-/* Ensure footer content is centered and has enough space /
-footer {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 2rem 1rem; / Add padding */
-}
-
-footer p {
-margin-top: 1rem; /* Add margin above the text */
-}
-
-/* Responsive animations */
-@key
-
-frames fadeIn {
-to {
-opacity: 1;
-}
-}
-
-.animation-container img.left-to-right,
-.animation-container img.right-to-left {
-animation: fadeIn 1s ease forwards;
-}
-
-/* Responsive grid for project containers */
-#projects .about-containers {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-grid-gap: 1rem;
-}
-
-/* Responsive text alignment for smaller screens */
-.section__text, .about-details-container, .experience-details-container, .contact-info-upper-container {
-text-align: center;
-}
-
-/* These are just starting points. You might need to adjust values such as sizes and breakpoints based on your actual content and design. Test these changes and tweak as necessary. */
-
